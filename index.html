@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+  <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -112,12 +112,55 @@
     #dynamic-text {
         font-weight: bold;
     } 
+     #projects {
+        padding: 60px 20px;
+        margin: 20px 10px;
+        border-radius: 15px;
+        box-shadow: 0 9px 11px rgba(0, 0, 0, 0.2);
+        transition: transform 0.3s, box-shadow 0.3s;
+        backdrop-filter: blur(10px) saturate(175%);
+        -webkit-backdrop-filter: blur(10px) saturate(175%);
+        background-color: rgba(255, 255, 255, 0.1);
+        border: 1px solid rgba(255, 255, 255, 0.18);
+    }
+    #projects:hover {
+        transform: translateY(-10px);
+        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4);
+    }
+    .project-grid {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    .project-card {
+        margin: 10px;
+        padding: 10px;
+        border-radius: 10px;
+        background-color: rgba(255, 255, 255, 0.1);
+        border: 1px solid rgba(255, 255, 255, 0.18);
+        transition: transform 0.3s, box-shadow 0.3s;
+    }
+    .project-card:hover {
+        transform: translateY(-10px);
+        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4);
+    }
+    .project-card img {
+        max-width: 100%;
+        border-radius: 10px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    }
+    .project-card p {
+        color: #fff;
+        margin-top: 10px;
+        font-size: 1.1em;
+        font-weight: bold;
+    }
     </style>
 </head>
 <body>
     <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
         <a class="navbar-brand" href="#">
-            <img src="me.png" alt="Logo" class="navbar-logo">UHF
+            <img src="logo.png" alt="Logo" class="navbar-logo">UHF
         </a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
@@ -130,6 +173,9 @@
                 <li class="nav-item">
                     <a class="nav-link" href="#gallery">Gallery</a>
                 </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#projects">My Projects</a>
+                </li> 
                 <li class="nav-item">
                     <a class="nav-link" href="#about">About</a>
                 </li>
@@ -169,6 +215,45 @@
             </div>
         </div>
     </section>
+    <!-- Add this HTML before the About section -->
+<section id="projects">
+    <div class="container">
+        <h2>My Projects</h2>
+        <div class="project-grid">
+            <div class="project-card">
+                <a href="https://our-logger.vercel.app/" target="_blank">
+                    <img src="project1.jpg" alt="Our Logger">
+                    <p>Our Logger</p>
+                </a>
+            </div>
+            <div class="project-card">
+                <a href="https://happy-birthday-rifat.vercel.app/" target="_blank">
+                    <img src="project2.jpg" alt="Happy Birthday Rifat">
+                    <p>Happy Birthday Rifat</p>
+                </a>
+            </div>
+            <div class="project-card">
+                <a href="https://eid-mubarak-phi.vercel.app/" target="_blank">
+                    <img src="project3.jpg" alt="Eid Mubarak Phi">
+                    <p>Eid Mubarak Phi</p>
+                </a>
+            </div>
+            <div class="project-card">
+                <a href="https://prettymoons.netlify.app/" target="_blank">
+                    <img src="project4.jpg" alt="Pretty Moons">
+                    <p>Pretty Moons</p>
+                </a>
+            </div>
+            <div class="project-card">
+                <a href="https://amiciforever.netlify.app/" target="_blank">
+                    <img src="project5.jpg" alt="Amici Forever">
+                    <p>Amici Forever</p>
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
+
     <section id="about">
         <div class="container">
             <h2>About Me</h2>
